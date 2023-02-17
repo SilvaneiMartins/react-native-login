@@ -3,7 +3,6 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 108,
         alignItems: 'center',
         paddingHorizontal: 30,
         backgroundColor: '#FFFFFF',
@@ -11,6 +10,7 @@ export default StyleSheet.create({
     logo: {
         width: 66,
         height: 72,
+        marginTop: 70,
         borderRadius: 18,
         backgroundColor: '#25CE09',
         alignItems: 'center',
@@ -62,7 +62,7 @@ export default StyleSheet.create({
     button: {
         height: 50,
         width: '100%',
-        marginTop: 50,
+        marginTop: 10,
         borderRadius: 10,
         alignItems: 'center',
         justifyContent: 'center',
@@ -71,5 +71,49 @@ export default StyleSheet.create({
     buttonText: {
         color: '#FFFFFF',
         fontSize: 18,
-    }
+    },
+    buttonSocial: {
+        height: 50,
+        width: '100%',
+        marginTop: 20,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 1,
+        borderRadius: 10,
+    },
+    imageGoogle: {
+        marginRight: 10,
+    },
+    buttonSocialText: {
+        color: '#000',
+        fontSize: 18,
+    },
+    forgotPassword: {
+        height: 30,
+        marginTop: 10,
+        width: '100%',
+        marginRight: 5,
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+    },
+    forgotPassworText: {
+        color: '#828282',
+    },
+    textLink: {
+        fontSize: 15,
+        color: '#1FA309',
+        fontWeight: 'bold',
+    },
+    forgotRegister: {
+        height: 30,
+        marginTop: 30,
+        width: '100%',
+        marginRight: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    forgotRegisterText: {
+        color: '#828282',
+    },
 });

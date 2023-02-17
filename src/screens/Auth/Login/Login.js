@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
-import { View, Text, TextInput, TouchableOpacity, Pressable, Alert } from 'react-native';
+import {
+    View,
+    Text,
+    Alert,
+    Image,
+    Pressable,
+    TextInput,
+    SafeAreaView,
+    TouchableOpacity,
+} from 'react-native';
 
 import { MaterialCommunityIcons, SimpleLineIcons } from '@expo/vector-icons';
 
 import styles from './styles';
+import LogoGoogle from '../../../assets/logo_google.png';
 
 export const Login = () => {
     const [show, setShow] = useState(false);
@@ -12,12 +22,24 @@ export const Login = () => {
         setShow(v => !v)
     }
 
-    const handleGoTLogin = () => {
+    const handleGoToLogin = () => {
         Alert.alert('Login realizado com sucesso!')
     }
 
+    const handleGoToLoginGoogle = () => {
+        Alert.alert('Login realizado com Google!')
+    }
+
+    const handleGoToForgotPassword = () => {
+        Alert.alert('Esqueceu sua Senha?')
+    }
+
+    const handleGoToForgotRegister = () => {
+        Alert.alert('Realizar um Cadastro?')
+    }
+
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
 
             <View style={styles.logo} >
                 <Text style={styles.titleLogo} >L</Text>
@@ -71,9 +93,32 @@ export const Login = () => {
                 </TouchableOpacity>
             </View>
 
-            <Pressable style={styles.button} onPress={handleGoTLogin} >
+            <Pressable style={styles.forgotPassword} onPress={handleGoToForgotPassword} >
+                <Text style={styles.forgotPassworText}>
+                    Esqueceu sua senha?
+                    <Text style={styles.textLink} > Clique aqui</Text>
+                </Text>
+            </Pressable>
+
+            <Pressable style={styles.button} onPress={handleGoToLogin} >
                 <Text style={styles.buttonText} >Entrar</Text>
             </Pressable>
-        </View>
+
+            <Pressable style={styles.buttonSocial} onPress={handleGoToLoginGoogle} >
+                <Image
+                    source={LogoGoogle}
+                    style={styles.imageGoogle}
+                />
+                <Text style={styles.buttonSocialText} >Login com o Google</Text>
+            </Pressable>
+
+            <Pressable style={styles.forgotRegister} onPress={handleGoToForgotRegister} >
+                <Text style={styles.forgotRegisterText}>
+                    Não tem cadastro?
+                    <Text style={styles.textLink} > Clique aqui</Text>
+                </Text>
+            </Pressable>
+
+        </SafeAreaView>
     )
 }

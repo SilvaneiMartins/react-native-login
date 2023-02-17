@@ -1,16 +1,13 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-import { Login } from './screens/Login';
+import { Routes } from './routes';
 
 export const MtApp = () => {
 
     return (
-        <View
-        style={{
-            flex: 1,
-        }}>
-            <Login />
+        <View style={{ flex: 1 }}>
+            <Routes />
         </View>
     )
 };
