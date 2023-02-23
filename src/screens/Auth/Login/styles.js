@@ -7,25 +7,6 @@ export default StyleSheet.create({
         paddingHorizontal: 30,
         backgroundColor: '#FFFFFF',
     },
-    logo: {
-        width: 66,
-        height: 72,
-        marginTop: 70,
-        borderRadius: 18,
-        backgroundColor: '#25CE09',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    titleLogo: {
-        fontSize: 42,
-        fontWeight: 'bold',
-        color: '#FFFFFF',
-    },
-    title: {
-        fontSize: 16,
-        marginTop: 16,
-        fontWeight: 'bold',
-    },
     subtitle: {
         fontSize: 12,
         marginTop: 16,

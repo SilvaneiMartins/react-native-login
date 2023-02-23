@@ -3,8 +3,19 @@ import { View, Text } from 'react-native';
 
 export const ForgotPassword = () => {
     return (
-        <View>
-            <Text>Recuperar Senha</Text>
+        <View
+            style={{
+                flex: 1,
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}
+        >
+            <Text
+                style={{
+                    fontSize: 30,
+                    fontWeight: 'bold'
+                }}
+            >Recuperar Senha</Text>
         </View>
     )
 }

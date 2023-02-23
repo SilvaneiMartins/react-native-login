@@ -9,13 +9,16 @@ import {
     SafeAreaView,
     TouchableOpacity,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import { MaterialCommunityIcons, SimpleLineIcons } from '@expo/vector-icons';
 
 import styles from './styles';
+import { HeaderLogo } from '../../../components/HeaderLogo';
 import LogoGoogle from '../../../assets/logo_google.png';
 
 export const Login = () => {
+    const navigation = useNavigation();
     const [show, setShow] = useState(false);
 
     const handleVisible = () => {
@@ -23,7 +26,7 @@ export const Login = () => {
     }
 
     const handleGoToLogin = () => {
-        Alert.alert('Login realizado com sucesso!')
+        Alert.alert('Login com e-mail e senha!')
     }
 
     const handleGoToLoginGoogle = () => {
@@ -31,21 +34,17 @@ export const Login = () => {
     }
 
     const handleGoToForgotPassword = () => {
-        Alert.alert('Esqueceu sua Senha?')
+        navigation.navigate('ForgotPassword');
     }
 
     const handleGoToForgotRegister = () => {
-        Alert.alert('Realizar um Cadastro?')
+        navigation.navigate('Cadastro');
     }
 
     return (
         <SafeAreaView style={styles.container}>
 
-            <View style={styles.logo} >
-                <Text style={styles.titleLogo} >L</Text>
-            </View>
-
-            <Text style={styles.title}>Bem Vindo ao Lungo!</Text>
+            <HeaderLogo />
 
             <Text style={styles.subtitle}>
                 Continuar com Login
