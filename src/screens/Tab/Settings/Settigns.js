@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-export const Search = () => {
+export const Settings = () => {
     return (
         <View
         style={{
@@ -10,7 +10,7 @@ export const Search = () => {
             justifyContent: 'center',
         }}
     >
-        <Text style={{ fontSize: 30 }} >Pesquisar</Text>
+        <Text style={{ fontSize: 30 }} >Configuração</Text>
     </View>
     )
 }

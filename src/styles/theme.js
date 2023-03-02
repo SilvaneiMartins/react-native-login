@@ -7,6 +7,7 @@ export default {
         greenEscuro: '#1FA309',
         azulClaro: '#7CB1FF',
         grayClaro: '#828282',
+        gray: '#BDBDBD',
     },
 
     fonts: {
